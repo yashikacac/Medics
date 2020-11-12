@@ -1,0 +1,27 @@
+{% extends 'app1/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="profile-section">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<h1 class="text-center">Login</h1>
+            </div>
+        </div>
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+                <form method="POST">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <br />
+                <div class="form-group">
+                    <button style="background-color:#F4EB16; color:blue" class="btn btn-outline-info" type="submit">Login</button>
+                    Don't have an account? <a href="/register" target="blank"><strong>register here</strong></a>!
+                </div>
+                </form>
+            </div>
+        </div> 
+    </div>
+</div>
+{% endblock %}
+

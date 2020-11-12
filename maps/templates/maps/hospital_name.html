@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<!-- <form method="POST">
+    {% csrf_token %} -->
+{% for names in form %}
+    <!-- {{ names }} -->
+    <a href="{% url 'list' pk=names.pk %}">{{ names.Name }} </a><br>
+{% endfor %}
+<!-- </form> -->
