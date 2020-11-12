@@ -1,4 +1,14 @@
-<table cellpadding = 10>
+{% extends 'app1/base.html' %}
+{% block content %}
+<style>
+  table,td,th{
+    border: 1px solid black
+  }
+  th,td{
+    padding: 10px;
+  }
+</style>
+<table cellpadding = 20 cellspacing = 20>
     <tr>
         <th>Name</th>
         <th>Address</th>
@@ -16,3 +26,4 @@
         </tr>
 
 </table>
+{% endblock %}

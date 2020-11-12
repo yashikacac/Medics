@@ -4,13 +4,15 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
 	<title>Hospital_Info</title>
 </head>
 <style type="text/css">
   
 body{
-  font-family: "Google Sans"!important;
+  font-family: 'Josefin Sans', sans-serif!important;
 }
 
 li a{
@@ -24,8 +26,7 @@ nav{
 
 </style>
 <body>
-      <div class="navbar navbar-default navbar-static-top 
-      {% block nav-style %}{% endblock %}">
+      <nav class="navbar navbar-default navbar-static-top{% block nav-style %}{% endblock %}">
           <div class="container p-none">
               <div class="navbar-header">
                   <button type="button" class="navbar-toggle"
@@ -50,8 +51,8 @@ nav{
                   </ul>
               </div>
           </div>
-      </div>
-      {% block main %}
+        </nav>
+      {% block content %}
       {% endblock %} 
 </body>
 </html>

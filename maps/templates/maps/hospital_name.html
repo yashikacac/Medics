@@ -1,8 +1,10 @@
-<!DOCTYPE html>
+{% extends 'app1/base.html' %}
+{% block content %}
 <!-- <form method="POST">
     {% csrf_token %} -->
 {% for names in form %}
     <!-- {{ names }} -->
-    <a href="{% url 'list' pk=names.pk %}">{{ names.Name }} </a><br>
+    <a href="{% url 'list' pk=names.pk %}">{{ names.Name }} </a><br><br>
 {% endfor %}
 <!-- </form> -->
+{% endblock %}
