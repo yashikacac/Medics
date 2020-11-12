@@ -17,7 +17,6 @@ def input(request):
             geolocator = Nominatim(user_agent="maps")
             user_address_input = form.cleaned_data['location']
             location_address = geolocator.geocode(user_address_input)
-            #api_key ='AIzaSyDVzWkKiyqK_YJC8iXNUoJnmWZatlxSQ9A'
             #source = ((location_address.latitude, location_address.longitude))
             source_lat = radians(location_address.latitude)
             source_lon = radians(location_address.longitude)
