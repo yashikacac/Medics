@@ -3,7 +3,7 @@ from geopy.geocoders import Nominatim
 # Create your views here.
 from django.http import HttpResponse
 from .models import Input,Hospital
-from .forms import InputForm
+from .forms import InputForm,HospitalForm
 import requests, json
 from math import radians, cos, sin, asin, sqrt
 
@@ -59,3 +59,19 @@ def list(request,pk):
     items = Hospital.objects.get(pk = pk)
 
     return render(request, 'maps/hospital_list.html', {'items': items})
+
+def get_name(request):
+    if request.method == 'POST':
+        # create a form instance and populate it with data from the request:
+        form = HospitalForm(request.POST)
+        # check whether it's valid:
+        if form.is_valid():
+            # process the data in form.cleaned_data as required
+            form.save()
+            return HttpResponse("<h3>Hospital Registered.</h3>")
+
+            # redirect to a new URL:
+    else:
+        form = HospitalForm()
+
+    return render(request, 'maps/name.html', {'form': form})

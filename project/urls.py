@@ -31,5 +31,7 @@ urlpatterns = [
    path('list/<int:pk>/',maps_views.list, name="list"),
    #path('', include('currLocation.urls')),
    #path("logout/", views.logout_request, name="logout"),
+   path('hospital/',maps_views.get_name, name="hospital"),
+   path('logout/', auth_views.LogoutView.as_view(template_name="app1/login.html"), name='logout'),
 
 ]

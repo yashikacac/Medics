@@ -41,12 +41,13 @@ nav{
               <div class="collapse navbar-collapse">
                   <ul class="nav navbar-nav navbar-right">
                       {% if user.is_authenticated %}
-                          <li><a href="">Logout</a></li>
+                          <li><a href="{% url 'logout' %}">Logout</a></li>
                           <li><a href=""
                                  class="p-r-none">Accounts</a></li>
                       {% else %}
                           <li><a href="{% url 'login' %}">Login</a></li>
                           <li><a href="{% url 'register' %}" class="p-r-none">Sign Up</a></li>
+                          <li><a href="{% url 'hospital' %}">Register Hospitals</a></li>
                       {% endif %}
                   </ul>
               </div>

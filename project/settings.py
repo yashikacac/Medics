@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 LOGIN_REDIRECT_URL = 'locate_yourself'
+LOGOUT_REDIRECT_URL = 'login'
 
 # Application definition
 
